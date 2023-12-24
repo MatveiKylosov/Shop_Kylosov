@@ -48,7 +48,6 @@ namespace Shop_Кылосов.Elements
 
             if (shopData.Photo != "" && shopData.Photo != null)
                 Photo.Source = new BitmapImage(new Uri(shopData.Photo));
-            MessageBox.Show(shopData.Photo);
         }
     }
 }
