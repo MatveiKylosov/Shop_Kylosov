@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shop_Кылосов.Classes
+namespace Shop_Кылосов.Models
 {
     public class Shop
     {
