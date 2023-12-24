@@ -21,7 +21,7 @@ namespace Shop_Кылосов
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<object> AllItems = Classes.RepoItems.AllItems();
+        List<object> AllItems = Classes.ShopContext.AllItems();
 
         public MainWindow()
         {
