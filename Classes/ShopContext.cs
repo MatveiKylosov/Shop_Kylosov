@@ -6,6 +6,18 @@ using System.Data.OleDb;
 using System.Text;
 using System.Threading.Tasks;
 
+
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+
 namespace Shop_Кылосов.Classes
 {
     public class ShopContext : Models.Shop, Interfaces.IContext
@@ -21,12 +33,16 @@ namespace Shop_Кылосов.Classes
             OleDbConnection connection = Common.DBConnection.Connection();
             OleDbDataReader shopData = Common.DBConnection.Query("SELECT * FROM [Товар]", connection);
 
-            while (shopData.Read()) {
 
+
+            while (shopData.Read()) {
                 ShopContext newShop = new ShopContext(
                     shopData.GetInt32(0),
                     shopData.GetString(1),
-                    shopData.GetInt32(2));
+                    (shopData.GetString(3).Contains('%') ? (int)((float)shopData.GetInt32(2) * (float.Parse(shopData.GetString(3).Replace("%", "")) / 100.00))
+                                             :
+                                                            shopData.GetInt32(2) - int.Parse(shopData.GetString(3)))
+                    );
 
                 allShop.Add(newShop);
             }
