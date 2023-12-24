@@ -9,7 +9,12 @@ namespace Shop_Кылосов.Models
     public class Children : Shop
     {
         public int Age { get; set; }
-        public Children(string Name, int Price, int Age) : base(Name, Price)
-            => this.Age = Age;
+        public int IdShop { get; set; }
+        public Children() { }
+        public Children(string Name, int Price, int Age, int IdShop) : base(IdShop, Name, Price)
+        {
+            this.Age = Age;
+            this.IdShop = IdShop;
+        }
     }
 }
