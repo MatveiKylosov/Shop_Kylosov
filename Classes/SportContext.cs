@@ -12,7 +12,7 @@ namespace Shop_Кылосов.Classes
     {
         public SportContext() { }
 
-        public SportContext(string Name, int Price, string Size, int IdShop) : base(Name, Price, Size, IdShop) { }
+        public SportContext(string Name, int Price, string Size, int IdShop, string Photo) : base(Name, Price, Size, IdShop, Photo) { }
 
         public List<object> All()
         {
@@ -27,7 +27,8 @@ namespace Shop_Кылосов.Classes
                     shopElement.Name,                    
                     shopElement.Price,
                     sportData.GetString(1),
-                    shopElement.Id);
+                    shopElement.Id,
+                    shopElement.Photo);
                 allSport.Add(newSport);
             }
             Common.DBConnection.CloseConnection(connection);

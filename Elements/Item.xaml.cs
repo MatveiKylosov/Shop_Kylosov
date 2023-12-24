@@ -24,7 +24,7 @@ namespace Shop_Кылосов.Elements
         {
             InitializeComponent();
             Models.Shop shopData = ItemData as Models.Shop;
-
+            
             tb_Name.Content = shopData.Name;
             tb_Price.Content = $"Цена: {shopData.Price}";
 
@@ -45,6 +45,10 @@ namespace Shop_Кылосов.Elements
                 Models.Electronics EaData = ItemData as Models.Electronics;
                 tb_Characteristic.Content = "Макс. скорость" + $"{EaData.DrivingSpeed}";
             }
+
+            if (shopData.Photo != "" && shopData.Photo != null)
+                Photo.Source = new BitmapImage(new Uri(shopData.Photo));
+            MessageBox.Show(shopData.Photo);
         }
     }
 }

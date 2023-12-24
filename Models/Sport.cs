@@ -13,7 +13,7 @@ namespace Shop_Кылосов.Models
         public Sport() { }
 
 
-        public Sport(string Name, int Price, string Size, int IdShop) : base (IdShop, Name, Price)
+        public Sport(string Name, int Price, string Size, int IdShop, string Photo) : base (IdShop, Name, Price, Photo)
         {
             this.Size = Size;
             this.IdShop = IdShop;

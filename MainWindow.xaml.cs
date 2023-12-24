@@ -27,6 +27,7 @@ namespace Shop_Кылосов
 
         public MainWindow()
         {
+
             InitializeComponent();
             CreateUI();
         }

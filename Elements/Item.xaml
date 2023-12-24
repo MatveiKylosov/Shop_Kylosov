@@ -13,7 +13,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image Margin="20" Width="160" Source="/Shop_Кылосов;component/Images/ic_item.png"/>
+                <Image Margin="20" Width="160" x:Name="Photo" Source="/Shop_Кылосов;component/Images/ic_item.png"/>
                 <Label x:Name="tb_Name" Content="Наименование" Margin="10, 10, 10, 0" Grid.Row="1"
                        HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"
                        Foreground="White"/>

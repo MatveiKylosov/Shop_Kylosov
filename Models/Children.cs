@@ -11,7 +11,7 @@ namespace Shop_Кылосов.Models
         public int Age { get; set; }
         public int IdShop { get; set; }
         public Children() { }
-        public Children(string Name, int Price, int Age, int IdShop) : base(IdShop, Name, Price)
+        public Children(string Name, int Price, int Age, int IdShop, string Photo) : base(IdShop, Name, Price, Photo)
         {
             this.Age = Age;
             this.IdShop = IdShop;

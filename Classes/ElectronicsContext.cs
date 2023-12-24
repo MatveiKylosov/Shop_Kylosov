@@ -12,7 +12,7 @@ namespace Shop_Кылосов.Classes
     {
         public ElectronicsContext() { }
 
-        public ElectronicsContext(string Name, int Price, int Id, string DrivingSpeed) : base(Name, Price, Id, DrivingSpeed) { }
+        public ElectronicsContext(string Name, int Price, int Id, string DrivingSpeed, string photo) : base(Name, Price, Id, DrivingSpeed, photo) { }
 
         public List<object> All()
         {
@@ -29,7 +29,7 @@ namespace Shop_Кылосов.Classes
                     shopElement.Name,
                     shopElement.Price,
                     shopElement.Id,
-                    electronicsData.GetString(1));
+                    electronicsData.GetString(1), shopElement.Photo);
                     allElectronics.Add(newElectronics);
             }
             Common.DBConnection.CloseConnection(connection);

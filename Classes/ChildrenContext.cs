@@ -13,7 +13,7 @@ namespace Shop_Кылосов.Classes
     {
         public ChildrenContext() { }
 
-        public ChildrenContext(int Id, string Name, int Price, int Age, int IdShop) : base(Name, Price, Age, IdShop) { }
+        public ChildrenContext(int Id, string Name, int Price, int Age, int IdShop, string Photo) : base(Name, Price, Age, IdShop, Photo) { }
 
         public List<object> All()
         {
@@ -33,7 +33,9 @@ namespace Shop_Кылосов.Classes
                     shopElement.Name,
                     shopElement.Price,
                     childrenData.GetInt32(1),
-                    childrenData.GetInt32(2));
+                    childrenData.GetInt32(2),
+                    shopElement.Photo
+                    );
                 allChildren.Add(newChildren);
             }
             Common.DBConnection.CloseConnection(connection);
