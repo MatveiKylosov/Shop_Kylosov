@@ -23,27 +23,27 @@ namespace Shop_Кылосов.Elements
         public Item(object ItemData)
         {
             InitializeComponent();
-            Classes.Shop shopData = ItemData as Classes.Shop;
+            Models.Shop shopData = ItemData as Models.Shop;
 
             tb_Name.Content = shopData.Name;
             tb_Price.Content = $"Цена: {shopData.Price}";
 
-            if(ItemData is Classes.Children)
+            if (ItemData is Models.Children)
             {
-                Classes.Children ChildrenData = ItemData as Classes.Children;
+                Models.Children ChildrenData = ItemData as Models.Children;
                 tb_Characteristic.Content = $"Возраст: {ChildrenData.Age}";
             }
 
-            if (ItemData is Classes.Sport)
+            if (ItemData is Models.Sport)
             {
-                Classes.Sport SportData = ItemData as Classes.Sport;
+                Models.Sport SportData = ItemData as Models.Sport;
                 tb_Characteristic.Content = $"Размер: {SportData.Size}";
             }
 
-            if(ItemData is Classes.Electronics)
+            if (ItemData is Models.Electronics)
             {
-                Classes.Electronics EaData = ItemData as Classes.Electronics;
-                tb_Characteristic.Content = $"{(EaData.BatterCapacity != 0 ? "Ёмкость батареии" : "Макс. скорость")}: {(EaData.BatterCapacity != 0 ? $"{EaData.BatterCapacity }" : $"{EaData.DrivingSpeed}")}";
+                Models.Electronics EaData = ItemData as Models.Electronics;
+                tb_Characteristic.Content = $"{(EaData.BatterCapacity != 0 ? "Ёмкость батареии" : "Макс. скорость")}: {(EaData.BatterCapacity != 0 ? $"{EaData.BatterCapacity}" : $"{EaData.DrivingSpeed}")}";
             }
         }
     }
