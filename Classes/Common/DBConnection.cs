@@ -9,7 +9,7 @@ namespace Shop_Кылосов.Classes.Common
 {
     public class DBConnection
     {
-        public static readonly string Path = @"";
+        public static readonly string Path = @"C:\Users\matve\Desktop\Shop_Кылосов\Shop.accdb";
 
         public static OleDbConnection Connection()
         {

@@ -21,7 +21,9 @@ namespace Shop_Кылосов
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<object> AllItems = Classes.ShopContext.AllItems();
+        List<object> AllItems_children = new Classes.ChildrenContext().All();
+        List<object> AllItems_electronics = new Classes.ElectronicsContext().All();
+        List<object> AllItems_sport = new Classes.SportContext().All();
 
         public MainWindow()
         {
@@ -31,8 +33,14 @@ namespace Shop_Кылосов
 
         public void CreateUI()
         {
-            foreach (object Item in AllItems)
-                parent.Children.Add(new Elements.Item(Item));
+            foreach (object item in AllItems_children)
+                parent.Children.Add(new Elements.Item(item));
+
+            foreach (object item in AllItems_electronics)
+                parent.Children.Add(new Elements.Item(item));
+
+            foreach (object item in AllItems_sport)
+                parent.Children.Add(new Elements.Item(item));
         }
 
         private void KeyDownHandler(object sender, KeyEventArgs e)

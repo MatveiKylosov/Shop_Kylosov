@@ -17,6 +17,7 @@ namespace Shop_Кылосов.Models
         }
         public Shop(int Id, string Name, int Price)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Price = Price;
         }

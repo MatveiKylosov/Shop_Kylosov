@@ -43,7 +43,7 @@ namespace Shop_Кылосов.Elements
             if (ItemData is Models.Electronics)
             {
                 Models.Electronics EaData = ItemData as Models.Electronics;
-                tb_Characteristic.Content = $"{(EaData.BatterCapacity != 0 ? "Ёмкость батареии" : "Макс. скорость")}: {(EaData.BatterCapacity != 0 ? $"{EaData.BatterCapacity}" : $"{EaData.DrivingSpeed}")}";
+                tb_Characteristic.Content = "Макс. скорость" + $"{EaData.DrivingSpeed}";
             }
         }
     }

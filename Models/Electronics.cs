@@ -8,12 +8,11 @@ namespace Shop_Кылосов.Models
 {
     public class Electronics : Shop
     {
-        public double BatterCapacity { get; set; }
+        public Electronics() { }
         public string DrivingSpeed { get; set; }
-        public Electronics(string Name, int Price, double BatterCapacity = 0) : base (Name, Price)
-            => this.BatterCapacity = BatterCapacity;
+        public int IdShop { get; set; }
 
-        public Electronics(string Name, int Price, string DrivingSpeed) : base(Name, Price)
+        public Electronics(string Name, int Price, int Id, string DrivingSpeed) : base(Id, Name, Price)
             => this.DrivingSpeed = DrivingSpeed;
     }
 }

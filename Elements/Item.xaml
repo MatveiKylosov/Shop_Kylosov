@@ -19,7 +19,7 @@
                        Foreground="White"/>
                 <Label x:Name="tb_Price" Content="Цена: " Margin="10, 41, 10, 0" Grid.Row="1"
                        VerticalAlignment="Top" Foreground="White"/>
-                <Label x:Name="tb_Characteristic" Content="Характеристика: " Margin="10, 72, 10, 0"
+                <Label x:Name="tb_Characteristic" Content="Описание: " Margin="10, 72, 10, 0"
                        Grid.Row="1" VerticalAlignment="Top" Foreground="White"/>
             </Grid>
             <Border.Effect>
