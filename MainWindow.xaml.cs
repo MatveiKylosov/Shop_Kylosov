@@ -70,38 +70,3 @@ namespace Shop_Кылосов
         }
     }
 }
-
-
-/*
-         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (var child in parent.Children)
-            {
-                if (!(child is Elements.Item itemElement))
-                    continue;
-
-                int fPrice = 0, sPrice = 0;
-
-                if (
-                        (int.TryParse(itemElement.tb_Price.Content.ToString().Remove(0, 5), out fPrice) & int.TryParse(PriceObject.Text.ToString(), out sPrice) &
-                        fPrice == sPrice) & 
-                        (
-                            (!string.IsNullOrEmpty(NameObject.Text) & itemElement.tb_Name.Content.ToString().ToLower().Contains(NameObject.Text.ToLower())) ||
-                            (!string.IsNullOrEmpty(AddObject.Text) & itemElement.tb_Characteristic.Content.ToString().ToLower().Contains(AddObject.Text.ToLower()))
-                        )
-                    )
-                {
-                    
-                    itemElement.BorderItem.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#6497bf"));
-                }
-                else
-                {
-                    itemElement.BorderItem.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#5a5a5a"));
-                }
-
-
-            }
-
-            Search.Visibility = Search.Visibility == Visibility.Visible ? Visibility.Hidden : Visibility.Visible;
-        }
- */
